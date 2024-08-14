@@ -38,6 +38,47 @@ function Image ({picture, alt, header, text}){
   ) 
 }
 
+function Footer ({weblink1, text1,weblink2, text2,weblink3, text3 , email , emailtext}){
+
+  return(
+  <footer className="footer">
+          <div className="colunms-container">
+            <div className="footer-column">
+              <p>Find us on:</p>
+              <ul className="footer-nav">
+                <li>
+
+                  <a href={weblink1} className="socials-link">
+                  {text1}
+                    </a>
+                </li>
+                <li>
+                  <a href={weblink2} className="socials-link">
+                  {text2}
+                    </a>
+                </li>
+                <li>
+                  <a href={weblink3} className="socials-link">
+                  {text3}</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="footer-column">
+              <p>Contact us:</p>
+              <address>
+                <a href={email} className="email-link">
+                {emailtext}
+                  </a>
+              </address>
+            </div>
+          </div>
+        </footer>
+
+  )
+  
+}
+
 
 
 
@@ -112,38 +153,21 @@ function App() {
           </section>
         </main>
 
-        
-        <footer className="footer">
-          <div className="colunms-container">
-            <div className="footer-column">
-              <p>Find us on:</p>
-              <ul className="footer-nav">
-                <li>
-                  <a href="https://www.facebook.com" className="socials-link">
-                    Facebook
-                    </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com" className="socials-link">
-                    Instagram
-                    </a>
-                </li>
-                <li>
-                  <a href="https://www.tiktok.com" className="socials-link">TikTok</a>
-                </li>
-              </ul>
-            </div>
+        <Footer
+            weblink1={"https://www.facebook.com"}
+            text1={"Facebook"}
+           
+            weblink2={"https://www.instagram.com"}
+            text2={"Instgram"}
+          
+            weblink3={"https://www.tiktok.com"}
+            text3={"Tiktok"}
 
-            <div className="footer-column">
-              <p>Contact us:</p>
-              <address>
-                <a href="mailto:info@firepalace.co.uk" className="email-link">
-                  info@firepalace.co.uk
-                  </a>
-              </address>
-            </div>
-          </div>
-        </footer>
+            email={"mailto:info@firepalace.co.uk2"}
+            emailtext={"info@firepalace.co.uk"}
+            
+            />
+        
       </div>
     </body>
     </>
